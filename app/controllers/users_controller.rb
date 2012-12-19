@@ -80,4 +80,13 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def change_state
+      @user = User.find(params[:user_id])
+      if @user
+        @user.fire_state_event(params[:user])
+        @user.save
+      end
+      redirect_to users_path
+  end
 end
