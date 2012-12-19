@@ -47,8 +47,8 @@ test:
   password: postgres
 
 production:
-  host: ec2-54-243-238-144.compute-1.amazonaws.com
-  port: 5432
+  #host: ec2-54-243-238-144.compute-1.amazonaws.com
+  #port: 5432
   adapter: postgresql
   encoding: unicode
   database: d4n8qmp1tlic3e
