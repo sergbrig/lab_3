@@ -4,10 +4,5 @@ one:
   login: MyString
   password: MyString
   contact_info: MyText
-  state: MyString
+  state: unpublished
 
-two:
-  login: MyString
-  password: MyString
-  contact_info: MyText
-  state: MyString

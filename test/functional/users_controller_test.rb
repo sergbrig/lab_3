@@ -38,7 +38,7 @@ class UsersControllerTest < ActionController::TestCase
     put :update, id: @user, user: { contact_info: @user.contact_info, login: @user.login, password: @user.password, state: @user.state }
     assert_redirected_to user_path(assigns(:user))
   end
-
+   
   test "should destroy user" do
     assert_difference('User.count', -1) do
       delete :destroy, id: @user
@@ -46,4 +46,9 @@ class UsersControllerTest < ActionController::TestCase
 
     assert_redirected_to users_path
   end
+  
+  test "should put change_state" do
+     put :change_state, user_id: @user.id, user: "delete"
+     assert_redirected_to users_path
+   end
 end
